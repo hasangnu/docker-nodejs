@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  nodejs:
+    image: hasangnu/nodejs
+    container_name: hasangnu_nodejs
+    tty: true
+    volumes:
+      - ./app:/app
+    ports:
+      - '8030:3000'
+    command: bash -c 'yarn && yarn start'
